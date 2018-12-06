@@ -15,5 +15,6 @@
     <ClInclude Include="MenuWnd.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="ListMainForm.h" />
   </ItemGroup>
 </Project>
