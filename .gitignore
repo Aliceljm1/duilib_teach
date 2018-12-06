@@ -14,6 +14,7 @@
 *.la
 *.a
 *.sbr
+
 MenuDemo/Debug/vc90.pdb
 *.idb
 QQDemo/Debug/color_skin.obj
