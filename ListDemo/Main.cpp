@@ -40,7 +40,7 @@ void TestMemoryFunc()
 
 	char chInput[512];
 	sprintf(chInput, "int:%d\n", array[0]);//手动修改内存， 请将array中的第一个数字大小修改为15，
-	DUITRACE(_T("array[0]: %s"), chInput);//注意用此方法可以输出信息到vs的调试窗口中
+	DUITRACE(_T("array---[0]: %s"), chInput);//注意用此方法可以输出信息到vs的调试窗口中
 
 	//OutputDebugString(chInput);
 
