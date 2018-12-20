@@ -6,7 +6,7 @@
 <VerticalLayout bkimage="file='bg.png' corner='10,100,10,10' hole='true'" bkcolor="#FF313C00">
 	<HorizontalLayout height="37" inset="0,2,0,0">
 		<VerticalLayout>
-			<Text text="ListDemo(tojen)" textcolor="#FFFFFFFF" font="1" float="true" pos="27,10,170,30"></Text>
+			<Text text="ListDemo9(tojen)" textcolor="#FFFFFFFF" font="1" float="true" pos="27,10,170,30"></Text>
 		</VerticalLayout>
 		<VerticalLayout width="70">
 			<Button float="true" pos="0,0,28,17" name="minbtn" maxwidth="28" maxheight="17" normalimage="file='max_min.png' source='0,0,28,17'" hotimage="file='max_min_h.png' source='0,0,28,17'" pushedimage="file='max_min_h.png' source='0,0,28,17'"/>
@@ -18,10 +18,10 @@
 			<Text text="Domain/ip:" textcolor="#000000" font="1"></Text>
 		</VerticalLayout>
 		<VerticalLayout>
-			<Edit height="23" text="List控件添加使用案例，每行可以响应事件" bordercolor="#C6CFD8" name="input" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'"/>
+			<Edit height="23" text="List控件添加使用案例，每行可以响应事件测试" bordercolor="#C6CFD8" name="input" bkimage="file='search_bg.png' source='0,0,258,23' corner='1,1,1,1'"/>
 		</VerticalLayout>
 		<VerticalLayout width="80">
-			<Button name="btn" text="Search" font="0" float="true" pos="5,0,63,23" maxwidth="63" maxheight="23" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
+			<Button name="btn_search" text="Search" font="0" float="true" pos="5,0,63,23" maxwidth="63" maxheight="23" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
 		</VerticalLayout>
 	</HorizontalLayout>
 	<HorizontalLayout inset="3,0,3,3">

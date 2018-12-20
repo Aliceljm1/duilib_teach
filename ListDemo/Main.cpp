@@ -24,7 +24,7 @@ void ListMainForm::Init()
 	m_pMaxBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("maxbtn")));
 	m_pRestoreBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("restorebtn")));
 	m_pMinBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("minbtn")));
-	m_pSearch = static_cast<CButtonUI*>(m_pm.FindControl(_T("btn")));
+	m_pSearch = static_cast<CButtonUI*>(m_pm.FindControl(_T("btn_search")));
 }
 
 /**

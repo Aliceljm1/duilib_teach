@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window sizebox="4,4,4,4" caption="0,0,0,30" mininfo="600,320" roundcorner="5,5" showdirty="true">
+    <Font name="宋体" size="13" bold="false" italic="false" />
+    <Font name="宋体" size="12" bold="false" italic="false" />
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,0,16,16&apos;&quot; button1hotimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,0,16,16&apos; mask=&apos;#FFFF00FF&apos;&quot; button1pushedimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,16,16,32&apos; mask=&apos;#FFFF00FF&apos;&quot; button1disabledimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,0,16,16&apos; mask=&apos;#FFFF00FF&apos;&quot; button2normalimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,32,16,48&apos; mask=&apos;#FFFF00FF&apos;&quot; button2hotimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,32,16,48&apos; mask=&apos;#FFFF00FF&apos;&quot; button2pushedimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,48,16,64&apos; mask=&apos;#FFFF00FF&apos;&quot; button2disabledimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,32,16,48&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbnormalimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,64,16,80&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbhotimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,64,16,80&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbpushedimage=&quot;ffile=&apos;scroll.png&apos; source=&apos;0,64,16,80&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; thumbdisabledimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,64,16,80&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railnormalimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,80,16,96&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railhotimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,80,16,96&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; railpushedimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,96,16,112&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; raildisabledimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,80,16,96&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bknormalimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,128,16,146&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkhotimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,128,16,146&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkpushedimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,128,16,146&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; bkdisabledimage=&quot;file=&apos;scroll.png&apos; source=&apos;0,128,16,146&apos; corner=&apos;2,2,2,2&apos; mask=&apos;#FFFF00FF&apos;&quot; " />
+    <VerticalLayout bkimage="file=&apos;bg.png&apos; corner=&apos;10,100,10,10&apos; hole=&apos;true&apos;" bkcolor="#FF313C00">
+        <HorizontalLayout height="37" inset="0,2,0,0">
+            <VerticalLayout>
+                <Text text="ListDemo9(tojen)" float="true" pos="27,10,0,0" width="143" height="20" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="1" align="wrap" />
+            </VerticalLayout>
+            <VerticalLayout width="70">
+                <Button name="minbtn" float="true" pos="0,0,0,0" width="28" height="17" maxheight="17" maxwidth="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;max_min.png&apos; source=&apos;0,0,28,17&apos;" hotimage="file=&apos;max_min_h.png&apos; source=&apos;0,0,28,17&apos;" pushedimage="file=&apos;max_min_h.png&apos; source=&apos;0,0,28,17&apos;" />
+                <Button name="closebtn" float="true" pos="28,0,0,0" width="28" height="17" maxheight="17" maxwidth="28" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;max_min.png&apos; source=&apos;28,0,56,17&apos;" hotimage="file=&apos;max_min_h.png&apos; source=&apos;28,0,56,17&apos;" pushedimage="file=&apos;max_min_h.png&apos; source=&apos;28,0,56,17&apos;" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="50" inset="0,4,0,8">
+            <VerticalLayout width="80" inset="8,4,2,2">
+                <Text text="Domain/ip:" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="wrap" />
+            </VerticalLayout>
+            <VerticalLayout>
+                <Edit name="input" text="List控件添加使用案例，每行可以响应事件" height="23" bkimage="file=&apos;search_bg.png&apos; source=&apos;0,0,258,23&apos; corner=&apos;1,1,1,1&apos;" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </VerticalLayout>
+            <VerticalLayout width="80">
+                <Button name="btn" text="Search" float="true" pos="5,0,0,0" width="58" height="23" maxheight="23" maxwidth="63" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="0" align="center" normalimage="file=&apos;button.png&apos; source=&apos;0,0,63,23&apos;" hotimage="file=&apos;button.png&apos; source=&apos;0,23,63,46&apos;" pushedimage="file=&apos;button.png&apos; source=&apos;0,23,63,46&apos;" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout inset="3,0,3,3">
+            <List name="domainlist" bkcolor="#FFFFFFFF" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file=&apos;list_header_bg.png&apos;" itemshowhtml="true" vscrollbar="true">
+                <ListHeader height="24" bkimage="file=&apos;list_header_bg.png&apos;" menu="true">
+                    <ListHeaderItem text="No" width="30" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;list_header_hot.png&apos;" pushedimage="file=&apos;list_header_pushed.png&apos;" sepimage="file=&apos;list_header_sep.png&apos;" />
+                    <ListHeaderItem text="Domain" width="260" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;list_header_hot.png&apos;" pushedimage="file=&apos;list_header_pushed.png&apos;" sepimage="file=&apos;list_header_sep.png&apos;" />
+                    <ListHeaderItem text="Description" width="240" minwidth="16" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;list_header_hot.png&apos;" pushedimage="file=&apos;list_header_pushed.png&apos;" sepimage="file=&apos;list_header_sep.png&apos;" />
+                </ListHeader>
+            </List>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>
