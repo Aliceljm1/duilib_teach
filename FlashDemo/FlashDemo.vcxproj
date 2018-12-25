@@ -164,7 +164,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>duilib_d.lib;comsuppwd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/FlashDemo_d.exe</OutputFile>
+      <OutputFile>../bin/FlashDemo.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Debug/FlashDemo.pdb</ProgramDatabaseFile>
