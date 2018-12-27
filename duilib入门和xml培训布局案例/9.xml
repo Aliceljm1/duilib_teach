@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="300,300" sizebox="5,5,5,5">
+    <VerticalLayout name="九宫格布局举例" bkcolor="#FFFFFFFF">
+        <HorizontalLayout  height="50">
+            <VerticalLayout  bkcolor="#FFFF0000" width="50">
+            	<Text text="左上"/>
+            </VerticalLayout>
+            <VerticalLayout  bkcolor="#FF00FF00">
+            	<Text text="中上"/>
+            </VerticalLayout>
+            <VerticalLayout  bkcolor="#FFFF0000" width="50">
+            	<Text text="右上"/>
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout >
+            <VerticalLayout  bkcolor="#FF00FF00" width="50">
+            	<Text text="左中"/>
+            </VerticalLayout>
+            <VerticalLayout >
+            	<Text text="中中" />
+            </VerticalLayout>
+            <VerticalLayout  bkcolor="#FF00FF00" width="50">
+            	<Text text="右中"/>
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout  height="50">
+            <VerticalLayout  bkcolor="#FFFF0000" width="50">
+            	<Text text="左下"/>
+            </VerticalLayout>
+            <VerticalLayout  bkcolor="#FF00FF00">
+            	<Text text="中下"/>
+            </VerticalLayout>
+            <VerticalLayout  bkcolor="#FFFF0000" width="50">
+            	<Text text="右下"/>
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>
