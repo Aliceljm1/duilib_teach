@@ -10,11 +10,17 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ListMainForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuWnd.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="ListMainForm.h" />
+    <ClInclude Include="ListMainForm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h" />
   </ItemGroup>
 </Project>

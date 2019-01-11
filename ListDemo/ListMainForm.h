@@ -11,22 +11,13 @@
 #include <vector>
 #include <sstream>
 
+#include "MenuWnd.h"
 #include "..\DuiLib\UIlib.h"
 
 using namespace DuiLib;
 
-#include "MenuWnd.h"
+
 #define WM_ADDLISTITEM WM_USER + 50
-
-/*
-* 存放第二列数据
-*/
-std::vector<std::string> domain;
-
-/*
-* 存放第三列数据
-*/
-std::vector<std::string> desc;
 
 
 /*
