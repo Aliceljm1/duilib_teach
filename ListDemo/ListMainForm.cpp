@@ -13,6 +13,8 @@
 
 using namespace DuiLib;
 
+#define TIMER_ID_TEST 100
+#define TIMER_TIME_TEST 1000
 
 /*
 * 存放第二列数据
@@ -33,7 +35,7 @@ void ListMainForm::Init()
 {
 	m_pCloseBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("closebtn")));
 	//static_cast 强制类型转换，_T 可以搜索文档16.2小节
-	
+
 	m_pMaxBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("maxbtn")));
 	m_pRestoreBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("restorebtn")));
 	m_pMinBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("minbtn")));
@@ -64,9 +66,9 @@ void TestMemoryFunc()
 	//}
 }
 
- DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
+DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 {
-	 TestMemoryFunc();
+	TestMemoryFunc();
 
 	try
 	{
@@ -97,7 +99,7 @@ void TestMemoryFunc()
 			*/
 			::Sleep(100);
 		}
-		
+
 		delete prama;//一定要删除这个变量，否则会造成内存泄漏，new Prama和delete要成对出现
 
 
@@ -281,8 +283,41 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 	m_pm.AttachDialog(pRoot);
 	m_pm.AddNotifier(this);
 	Init();
+
+	SetTimer(this->m_hWnd, TIMER_ID_TEST, TIMER_TIME_TEST, 0);
+
 	return 0;
 }
+
+
+
+/***
+可以使用内存诊断工具（调试，窗口，显示诊断工具）清晰的看到内存只增不减的情形
+*/
+void ListMainForm::onTimerTest() 
+{
+	void * ptr = malloc(1024*1024);
+
+	Sleep(10);//注释以下三句
+	if (ptr)
+		free(ptr);
+}
+
+
+void ListMainForm::OnTimer(WPARAM wParam, LPARAM lParam)
+{
+	switch (wParam)
+	{
+	case TIMER_ID_TEST:
+	{
+		onTimerTest();
+		break;
+	}
+	default:
+		break;
+	}
+}
+
 
 LRESULT  ListMainForm::OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
@@ -409,6 +444,11 @@ LRESULT  ListMainForm::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_SIZE:          lRes = OnSize(uMsg, wParam, lParam, bHandled); break;
 	case WM_GETMINMAXINFO: lRes = OnGetMinMaxInfo(uMsg, wParam, lParam, bHandled); break;
 	case WM_SYSCOMMAND:    lRes = OnSysCommand(uMsg, wParam, lParam, bHandled); break;
+	case WM_TIMER:
+	{
+		OnTimer(wParam, lParam);
+		break;
+	}
 	default:
 		bHandled = FALSE;
 	}

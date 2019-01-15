@@ -1,6 +1,5 @@
 /*
-* Code By Tojen (qq:342269237)
-* 界面设计图片资源80%原创，布局完全原创,学习作品，不好请拍砖
+* 动态列表demo，
 */
 #include "ListMainForm.h"
 #include "MenuWnd.h"

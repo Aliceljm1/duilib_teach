@@ -19,6 +19,8 @@
 
 using namespace DuiLib;
 
+// 请调研思考使用 stdafx.h的好处，
+
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 

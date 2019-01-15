@@ -81,6 +81,8 @@ public:
         bHandled = FALSE;
         return 0;
     }
+	void					onTimerTest();
+	void				  OnTimer(WPARAM wParam, LPARAM lParam); //¶¨Ê±Æ÷
 
     LRESULT OnDestroy(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
     {

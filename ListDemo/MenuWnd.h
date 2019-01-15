@@ -1,6 +1,8 @@
 #pragma once
 #include "StdAfx.h"
 
+//此类写法暂不规范，请勿模仿，非常不推荐将所有业务逻辑写到头文件中
+
 inline HBITMAP CreateMyBitmap(HDC hDC, int cx, int cy, COLORREF** pBits)
 {
     LPBITMAPINFO lpbiSrc = NULL;
