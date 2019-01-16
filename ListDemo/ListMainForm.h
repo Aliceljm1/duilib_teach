@@ -42,6 +42,17 @@ public:
     ListMainForm() {
     };
 
+	CDuiString GetSkinFolder()
+	{
+
+		return _T("skin\\ListRes\\");
+	}
+
+	CDuiString GetSkinFile()
+	{
+		return _T("skin.xml");
+	}
+
     LPCTSTR GetWindowClassName() const 
     { 
         return _T("ScanMainForm"); 

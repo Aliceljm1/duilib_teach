@@ -113,11 +113,17 @@ DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 }
 
 
+/***
+*TODO 编写函数在点击search按钮之后当前窗口围绕左上角旋转，旋转半径为50，考虑多线程，定时器
+
+*/
+
 
 
 
 void ListMainForm::OnSearch()
 {
+
 	struct Prama *prama = new Prama;
 
 	CListUI* pList = static_cast<CListUI*>(m_pm.FindControl(_T("domainlist"))); //提问： 此处可以如何优化？
@@ -270,18 +276,30 @@ LRESULT  ListMainForm::OnAddListItem(UINT uMsg, WPARAM wParam, LPARAM lParam, BO
 	return 0;
 }
 
+/***
+*以下部分代码来自WindowImplBase::OnCreate， 可以了解最原始的窗口建立过程
+*/
 LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
 	LONG styleValue = ::GetWindowLong(*this, GWL_STYLE);
 	styleValue &= ~WS_CAPTION;
 	::SetWindowLong(*this, GWL_STYLE, styleValue | WS_CLIPSIBLINGS | WS_CLIPCHILDREN);
-	m_pm.Init(m_hWnd);
-	//m_pm.SetTransparent(100);
+	
 	CDialogBuilder builder;
-	CControlUI* pRoot = builder.Create(_T("skin.xml"), (UINT)0, NULL, &m_pm);
+	CDuiString strResourcePath = m_pm.GetResourcePath();
+	if (strResourcePath.IsEmpty())
+	{
+		strResourcePath = m_pm.GetInstancePath();
+		strResourcePath += GetSkinFolder().GetData();
+	}
+	m_pm.SetResourcePath(strResourcePath.GetData());
+
+	m_pm.Init(m_hWnd);
+	CControlUI* pRoot = builder.Create(GetSkinFile().GetData(), (UINT)0, NULL, &m_pm);
 	ASSERT(pRoot && "Failed to parse XML");
 	m_pm.AttachDialog(pRoot);
 	m_pm.AddNotifier(this);
+
 	Init();
 
 	SetTimer(this->m_hWnd, TIMER_ID_TEST, TIMER_TIME_TEST, 0);
