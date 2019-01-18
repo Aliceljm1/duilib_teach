@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="300,300" sizebox="5,5,5,5">  
+    <HorizontalLayout  bkcolor="#FFFFFFFF" bordersize="1" inset="1,1,1,1">  
+    		<!--控件的右边被锚定-->
+        <Control />  
+        <Control width="50" bkcolor="#FFFF00FF" />  
+    </HorizontalLayout>  
+</Window>
