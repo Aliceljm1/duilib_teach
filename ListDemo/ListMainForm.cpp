@@ -112,6 +112,11 @@ DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 	}
 }
 
+/***
+*课程1 修改皮肤xml文件,对照“属性列表.xml”学习当前皮肤中使用了哪些属性和控件
+自行修改属性，观察结果，查找并解答注释中的TODO和提问
+*/
+
 
 /***
 *课程2 编写函数在点击search按钮之后当前窗口围绕左上角旋转，旋转半径为50，考虑多线程，定时器
