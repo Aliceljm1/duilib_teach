@@ -114,11 +114,25 @@ DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 
 
 /***
-*TODO 编写函数在点击search按钮之后当前窗口围绕左上角旋转，旋转半径为50，考虑多线程，定时器
-
+*课程2 编写函数在点击search按钮之后当前窗口围绕左上角旋转，旋转半径为50，考虑多线程，定时器
 */
 
 
+/**
+* 课程3，学习布局，将《duilib入门和xml培训布局案例》文件夹中的布局文件全部拷贝到skin\\ListRes\\中，
+然后修改 	CDuiString GetSkinFile() 的代码来切换布局文件，
+要求自己编写要给复杂的包含垂直布局，水平布局组合的Ui文件，同时修改窗口圆角，等等熟悉，发挥自己的创作醒性
+*/
+
+/***
+* 课程4 ,模拟qq，或者微信登陆窗口输入用户名密码，请求web接口，验证用户名密码，然后校验
+
+自行安装node.js客户端，下载代码运行：
+https://github.com/Aliceljm1/NodeDemo.git
+
+自行搜索互联网资源查找libcurl的用发，发送HTTP请求
+https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
+*/
 
 
 void ListMainForm::OnSearch()

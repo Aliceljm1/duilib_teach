@@ -1,9 +1,5 @@
 #pragma once
 
-/*
-* Code By Tojen (qq:342269237)
-* 界面设计图片资源80%原创，布局完全原创,学习作品，不好请拍砖
-*/
 #include <objbase.h>
 #include <zmouse.h>
 #include <exdisp.h>
@@ -48,11 +44,7 @@ public:
 		return _T("skin\\ListRes\\");
 	}
 
-	/**
-	* 课程三，学习布局，将《duilib入门和xml培训布局案例》文件夹中的布局文件全部拷贝到skin\\ListRes\\中，
-	然后修改此代码来切换布局文件，
-	要求自己编写要给复杂的包含垂直布局，水平布局组合的Ui文件，同时修改窗口圆角，等等熟悉，发挥自己的创作醒性
-	*/
+
 	CDuiString GetSkinFile()
 	{
 		//return _T("skin.xml");
