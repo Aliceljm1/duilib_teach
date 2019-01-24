@@ -6,8 +6,14 @@ CUserInfo::CUserInfo()
 {
 }
 
-string CUserInfo::getId() { return m_uid; };
-string CUserInfo::getUserName() { return m_username; };
+string CUserInfo::getId()
+{
+	return m_uid; };
+
+string CUserInfo::getUserName() 
+{ 
+	return m_username; 
+};
 
 
 void CUserInfo::setId(string id)
