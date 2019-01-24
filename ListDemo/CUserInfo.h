@@ -11,8 +11,8 @@ public:
 	void setUserName(string name);
 
 private:
-	string uid;
-	string username;
+	string m_uid;
+	string m_username;
 
 
 public:
