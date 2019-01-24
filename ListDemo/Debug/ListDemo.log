@@ -1,3 +1,4 @@
 ﻿  ListMainForm.cpp
+  CUserInfo.cpp
   Main.cpp
   ListDemo.vcxproj -> G:\Project\GitProject\duilib_teach\\bin\ListDemo.exe

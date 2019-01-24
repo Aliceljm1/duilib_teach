@@ -12,6 +12,7 @@
 
 using namespace DuiLib;
 
+//using namespace std;
 
 #define WM_ADDLISTITEM WM_USER + 50
 
@@ -30,6 +31,7 @@ struct Prama
 struct TestMem {
 	int count;
 };
+
 
 
 class ListMainForm : public CWindowWnd, public INotifyUI, public IListCallbackUI

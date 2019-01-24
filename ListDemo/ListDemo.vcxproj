@@ -270,6 +270,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CUserInfo.cpp" />
     <ClCompile Include="ListMainForm.cpp" />
     <ClCompile Include="Main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -291,6 +292,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CUserInfo.h" />
     <ClInclude Include="ListMainForm.h" />
     <ClInclude Include="MenuWnd.h" />
     <ClInclude Include="StdAfx.h" />

@@ -31,7 +31,7 @@ https://github.com/Aliceljm1/100C
 /**
 课程3，学习布局，将《duilib入门和xml培训布局案例》文件夹中的布局文件全部拷贝到skin\\ListRes\\中，
 然后修改 	CDuiString GetSkinFile() 的代码来切换布局文件，
-要求自己编写要给复杂的包含垂直布局，水平布局组合的Ui文件，同时修改窗口圆角，等等熟悉，发挥自己的创作醒性
+要求自己编写要给复杂的包含垂直布局，水平布局组合的Ui文件，同时修改窗口圆角，等等熟悉，发挥自己的创造性
 */
 
 /***
@@ -42,6 +42,7 @@ https://github.com/Aliceljm1/NodeDemo.git
 
 自行搜索互联网资源查找libcurl的用发，发送HTTP请求
 https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
+https://github.com/search?q=libcurl+demo
 */
 
 # Duilib

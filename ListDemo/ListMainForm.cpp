@@ -140,6 +140,14 @@ https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
 */
 
 
+/***
+*课程5，改用http://localhost:8081/autologin接口登陆，解析出用户信息用UserInfo模型装载，然后用新的窗口显示这些信息
+其他字段自己完善
+*/
+
+
+
+
 void ListMainForm::OnSearch()
 {
 
@@ -204,7 +212,7 @@ LPCTSTR  ListMainForm::GetItemText(CControlUI* pControl, int iIndex, int iSubIte
 #else
 		_stprintf(szBuf, desc[iIndex].c_str());
 #endif
-	}
+}
 	break;
 	}
 	pControl->SetUserData(szBuf);
@@ -303,7 +311,7 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 	LONG styleValue = ::GetWindowLong(*this, GWL_STYLE);
 	styleValue &= ~WS_CAPTION;
 	::SetWindowLong(*this, GWL_STYLE, styleValue | WS_CLIPSIBLINGS | WS_CLIPCHILDREN);
-	
+
 	CDialogBuilder builder;
 	CDuiString strResourcePath = m_pm.GetResourcePath();
 	if (strResourcePath.IsEmpty())
@@ -331,9 +339,9 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 /***
 可以使用内存诊断工具（调试，窗口，显示诊断工具）清晰的看到内存只增不减的情形
 */
-void ListMainForm::onTimerTest() 
+void ListMainForm::onTimerTest()
 {
-	void * ptr = malloc(1024*1024);
+	void * ptr = malloc(1024 * 1024);
 
 	Sleep(10);//注释以下三句
 	if (ptr)

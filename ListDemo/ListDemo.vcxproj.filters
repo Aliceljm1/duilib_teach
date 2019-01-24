@@ -13,6 +13,9 @@
     <ClCompile Include="ListMainForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CUserInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuWnd.h">
@@ -22,5 +25,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="CUserInfo.h" />
   </ItemGroup>
 </Project>
