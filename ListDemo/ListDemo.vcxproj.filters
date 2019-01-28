@@ -5,26 +5,43 @@
       <UniqueIdentifier>{835a4270-af43-4902-b7d8-950a553752e0}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{9aab8cfc-fe99-497d-a089-1b79febac531}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controler">
+      <UniqueIdentifier>{acffb325-6458-44e4-a7a8-8e4a2dc36804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{94db89a5-73ad-4ab8-89f4-484fa47af6b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ListMainForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CUserInfo.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserControler.cpp">
+      <Filter>Controler</Filter>
+    </ClCompile>
+    <ClCompile Include="ListMainForm.cpp">
+      <Filter>Window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuWnd.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="CUserInfo.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserControler.h">
+      <Filter>Controler</Filter>
     </ClInclude>
     <ClInclude Include="ListMainForm.h">
-      <Filter>Source Files</Filter>
+      <Filter>Window</Filter>
     </ClInclude>
-    <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="CUserInfo.h" />
+    <ClInclude Include="MenuWnd.h">
+      <Filter>Window</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

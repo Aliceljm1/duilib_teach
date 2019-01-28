@@ -141,11 +141,17 @@ https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
 
 
 /***
-*课程5，改用http://localhost:8081/autologin接口登陆，解析出用户信息用UserInfo模型装载，然后用新的窗口显示这些信息
-其他字段自己完善
+*课程5，改用http://localhost:8081/autologin接口登陆，解析出用户信息用CUserInfo模型装载，相关解析代码放到CUserControler中，然后创建新的窗口显示这些信息
+其他字段自己完善，要求新的窗口需要继承WindowImplBase，而非CWindowWnd，仔细观察区别体会优点
+CUserControler中的其他函数自己实现。仔细体会使用不同的类将各个抽象层次的逻辑代码拆分出来的好处。每一层只负责一个维度的逻辑，
+每个层都很纯粹，可维护性，可复用性很强。
+
 */
 
 
+/*****
+*课程6，将model和controler层分别拆分出lib，和dll调用。学会模块化开发
+*/
 
 
 void ListMainForm::OnSearch()
