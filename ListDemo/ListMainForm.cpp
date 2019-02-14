@@ -137,6 +137,8 @@ https://github.com/Aliceljm1/NodeDemo.git
 
 自行搜索互联网资源查找libcurl的用发，发送HTTP请求
 https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
+
+将之前的字符串操作方法，网络访问方法都重构到对应的utils类中，保持每个类的纯粹性
 */
 
 

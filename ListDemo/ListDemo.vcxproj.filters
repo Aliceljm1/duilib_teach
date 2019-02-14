@@ -14,6 +14,9 @@
     <Filter Include="Window">
       <UniqueIdentifier>{94db89a5-73ad-4ab8-89f4-484fa47af6b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{8819c578-b6d8-42c1-8f75-1e6e7871904b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -28,9 +31,14 @@
     <ClCompile Include="ListMainForm.cpp">
       <Filter>Window</Filter>
     </ClCompile>
+    <ClCompile Include="CStringUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CNetUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StdAfx.h" />
     <ClInclude Include="CUserInfo.h">
       <Filter>Model</Filter>
     </ClInclude>
@@ -42,6 +50,15 @@
     </ClInclude>
     <ClInclude Include="MenuWnd.h">
       <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CStringUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CNetUtils.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

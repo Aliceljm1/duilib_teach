@@ -270,6 +270,8 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CNetUtils.cpp" />
+    <ClCompile Include="CStringUtils.cpp" />
     <ClCompile Include="CUserControler.cpp" />
     <ClCompile Include="CUserInfo.cpp" />
     <ClCompile Include="ListMainForm.cpp" />
@@ -293,6 +295,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CNetUtils.h" />
+    <ClInclude Include="CStringUtils.h" />
     <ClInclude Include="CUserControler.h" />
     <ClInclude Include="CUserInfo.h" />
     <ClInclude Include="ListMainForm.h" />
