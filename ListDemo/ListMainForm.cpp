@@ -138,7 +138,7 @@ https://github.com/Aliceljm1/NodeDemo.git
 自行搜索互联网资源查找libcurl的用发，发送HTTP请求
 https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
 
-将之前的字符串操作方法，网络访问方法都重构到对应的utils类中，保持每个类的纯粹性
+
 */
 
 
@@ -148,6 +148,7 @@ https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
 CUserControler中的其他函数自己实现。仔细体会使用不同的类将各个抽象层次的逻辑代码拆分出来的好处。每一层只负责一个维度的逻辑，
 每个层都很纯粹，可维护性，可复用性很强。
 
+将之前的字符串操作方法，网络访问方法都重构到对应的utils类中，保持每个类的纯粹性
 */
 
 
