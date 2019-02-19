@@ -153,9 +153,15 @@ CUserControler中的其他函数自己实现。仔细体会使用不同的类将各个抽象层次的逻辑代码
 
 
 /*****
-*课程6，将model和controler层分别拆分出lib，和dll调用。学会模块化开发
+*课程6练习抽出dll.lib库，分模块开发，将model和controler层分别拆分出lib，和dll调用。学会模块化开发
+参考： vs关键配置相关信息.docx
 */
 
+
+/*****
+*课程7练习使用sqlite数据库，将登陆成功之后服务端返回的数据存储到数据库中使用（\3rd\sqlite\sqlite3.lib）
+下次启动软件自动读取数据库中的登陆历史记录，供用户选择点击直接登陆。 
+*/
 
 void ListMainForm::OnSearch()
 {
