@@ -49,8 +49,8 @@ public:
 
 	CDuiString GetSkinFile()
 	{
-		//return _T("skin.xml");
-		return _T("2.xml");
+		return _T("skin.xml");
+		//return _T("2.xml");
 	}
 
     LPCTSTR GetWindowClassName() const 
