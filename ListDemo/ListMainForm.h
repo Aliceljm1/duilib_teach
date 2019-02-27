@@ -89,9 +89,12 @@ public:
 
     LRESULT OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
     {
-        bHandled = FALSE;
+		//注意触发顺序，OnClose OnDestroy OnFinalMessage
+        bHandled = TRUE;
+		ShowWindow(true);
         return 0;
     }
+
 	void					onTimerTest();
 	void				  OnTimer(WPARAM wParam, LPARAM lParam); //定时器
 
