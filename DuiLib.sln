@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlashDemo", "FlashDemo\Flas
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wtest", "语法相关\VirtualTest\wtest.vcxproj", "{6DA347FB-1EB9-4944-9DE5-846DE1AA5672}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameDemo", "IExplorerDemo\IExplorerDemo.vcxproj", "{1459B2F2-09CD-4859-BF0A-77407F08162C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -193,6 +195,18 @@ Global
 		{6DA347FB-1EB9-4944-9DE5-846DE1AA5672}.UnicodeRelease|Win32.Build.0 = Release|Win32
 		{6DA347FB-1EB9-4944-9DE5-846DE1AA5672}.UnicodeRelease|x64.ActiveCfg = Release|x64
 		{6DA347FB-1EB9-4944-9DE5-846DE1AA5672}.UnicodeRelease|x64.Build.0 = Release|x64
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.Debug|Win32.Build.0 = Debug|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.Debug|x64.ActiveCfg = Debug|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.Release|Win32.ActiveCfg = Release|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.Release|Win32.Build.0 = Release|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.Release|x64.ActiveCfg = Release|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.UnicodeDebug|x64.ActiveCfg = UnicodeDebug|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{1459B2F2-09CD-4859-BF0A-77407F08162C}.UnicodeRelease|x64.ActiveCfg = UnicodeRelease|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -208,6 +222,7 @@ Global
 		{41B017E7-7805-40D5-9D96-AABF572F57D1} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
 		{41B017E7-7805-40D5-9D96-AABF572F5700} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
 		{6DA347FB-1EB9-4944-9DE5-846DE1AA5672} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
+		{1459B2F2-09CD-4859-BF0A-77407F08162C} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25A602C2-A6AC-44D7-A43D-A26574A887CB}
