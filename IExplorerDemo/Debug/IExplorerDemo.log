@@ -1,2 +1,0 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (.\Debug\) contains files shared from another project (GameDemo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  IExplorerDemo.vcxproj -> G:\Project\GitProject\duilib_teach\\bin\IExplorerDemo.exe
