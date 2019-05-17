@@ -81,19 +81,19 @@ public:
 
     LRESULT OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
     {
-        POINT pt; pt.x = GET_X_LPARAM(lParam); pt.y = GET_Y_LPARAM(lParam);
-        ::ScreenToClient(*this, &pt);
+        //POINT pt; pt.x = GET_X_LPARAM(lParam); pt.y = GET_Y_LPARAM(lParam);
+        //::ScreenToClient(*this, &pt);
 
-        RECT rcClient;
-        ::GetClientRect(*this, &rcClient);
+        //RECT rcClient;
+        //::GetClientRect(*this, &rcClient);
 
-        RECT rcCaption = m_pm.GetCaptionRect();
-        if( pt.x >= rcClient.left + rcCaption.left && pt.x < rcClient.right - rcCaption.right \
-            && pt.y >= rcCaption.top && pt.y < rcCaption.bottom ) {
-                CControlUI* pControl = static_cast<CControlUI*>(m_pm.FindControl(pt));
-                if( pControl && _tcscmp(pControl->GetClass(), DUI_CTR_BUTTON) != 0 )
-                    return HTCAPTION;
-        }
+        //RECT rcCaption = m_pm.GetCaptionRect();
+        //if( pt.x >= rcClient.left + rcCaption.left && pt.x < rcClient.right - rcCaption.right \
+        //    && pt.y >= rcCaption.top && pt.y < rcCaption.bottom ) {
+        //        CControlUI* pControl = static_cast<CControlUI*>(m_pm.FindControl(pt));
+        //        if( pControl && _tcscmp(pControl->GetClass(), DUI_CTR_BUTTON) != 0 )
+        //            return HTCAPTION;
+        //}
 
         return HTCLIENT;
     }
@@ -160,10 +160,12 @@ public:
     CPaintManagerUI m_pm;
 };
 
+LPCTSTR defurl = _T("http://www.ewebeditor.net/demo/");
+
 class CGameFrameWnd : public CWindowWnd, public INotifyUI, public IListCallbackUI
 {
 public:
-    CGameFrameWnd() { };
+    CGameFrameWnd() { m_pWebBrowser = NULL; };
     LPCTSTR GetWindowClassName() const { return _T("UIMainFrame"); };
     UINT GetClassStyle() const { return CS_DBLCLKS; };
     void OnFinalMessage(HWND /*hWnd*/) { delete this; };
@@ -173,16 +175,21 @@ public:
         m_pMaxBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("maxbtn")));
         m_pRestoreBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("restorebtn")));
         m_pMinBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("minbtn")));
+		m_pLoadurl = static_cast<CButtonUI*>(m_pm.FindControl(_T("btn_loadurl")));
+		
+		m_txturl = static_cast<CEditUI*>(m_pm.FindControl(_T("txt_url")));
+
 
         CActiveXUI* pActiveXUI = static_cast<CActiveXUI*>(m_pm.FindControl(_T("ie")));
         if( pActiveXUI ) {
-            IWebBrowser2* pWebBrowser = NULL;
-            pActiveXUI->GetControl(IID_IWebBrowser2, (void**)&pWebBrowser);
-            if( pWebBrowser != NULL ) {
-                pWebBrowser->Navigate(L"http://www.ewebeditor.net/demo/",NULL,NULL,NULL,NULL);  
+            //IWebBrowser2* pWebBrowser = NULL;
+            pActiveXUI->GetControl(IID_IWebBrowser2, (void**)&m_pWebBrowser);
+            if(m_pWebBrowser != NULL ) {
+				m_txturl->SetText(defurl);
+				m_pWebBrowser->Navigate(L"http://www.ewebeditor.net/demo/",NULL,NULL,NULL,NULL);
 				//https://ie.icoa.cn/  浏览器检查
                 //pWebBrowser->Navigate(L"about:blank",NULL,NULL,NULL,NULL); 
-                pWebBrowser->Release();
+				//m_pWebBrowser->Release();
             }
         }
     }
@@ -210,6 +217,9 @@ public:
             else if( msg.pSender == m_pMinBtn ) { SendMessage(WM_SYSCOMMAND, SC_MINIMIZE, 0); return; }
             else if( msg.pSender == m_pMaxBtn ) { SendMessage(WM_SYSCOMMAND, SC_MAXIMIZE, 0); return; }
             else if( msg.pSender == m_pRestoreBtn ) { SendMessage(WM_SYSCOMMAND, SC_RESTORE, 0); return; }
+			else if (msg.pSender == m_pLoadurl) {
+				loadCurrentUrl();
+			}
             CDuiString name = msg.pSender->GetName();
             if( name == _T("quitbtn") ) {
                 /*Close()*/PostQuitMessage(0); // 因为activex的原因，使用close可能会出现错误
@@ -217,6 +227,14 @@ public:
 
         }
     }
+
+	void loadCurrentUrl()
+	{
+		CDuiString url = m_txturl->GetText();
+		_bstr_t strstr=url.GetData();
+
+		m_pWebBrowser->Navigate(strstr, NULL, NULL, NULL, NULL);
+	}
 
     LPCTSTR GetItemText(CControlUI* pControl, int iIndex, int iSubItem)
     {
@@ -402,7 +420,10 @@ private:
     CButtonUI* m_pCloseBtn;
     CButtonUI* m_pMaxBtn;
     CButtonUI* m_pRestoreBtn;
+	CButtonUI* m_pLoadurl;
     CButtonUI* m_pMinBtn;
+	IWebBrowser2* m_pWebBrowser;
+	CEditUI* m_txturl;
     //...
 };
 

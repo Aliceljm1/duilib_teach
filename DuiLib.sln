@@ -45,7 +45,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlashDemo", "FlashDemo\Flas
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wtest", "语法相关\VirtualTest\wtest.vcxproj", "{6DA347FB-1EB9-4944-9DE5-846DE1AA5672}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameDemo", "IExplorerDemo\IExplorerDemo.vcxproj", "{1459B2F2-09CD-4859-BF0A-77407F08162C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IExplorerDemo", "IExplorerDemo\IExplorerDemo.vcxproj", "{1459B2F2-09CD-4859-BF0A-77407F08162C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
