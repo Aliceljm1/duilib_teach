@@ -1,7 +1,7 @@
 #include "StdAfx.h"
-#include "ListMainForm.h"
+#include "ErrorMainForm.h"
 #include "MenuWnd.h"
-
+#include "ErrorDemo.h"
 
 #include <objbase.h>   //思考此处为何把#include分段
 #include <zmouse.h>
@@ -275,6 +275,29 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 		{
 			OnSearch();
 		}
+
+		else if (msg.pSender->GetName().Compare("btn_nullPointer")==0) {
+			ErrorDemo d; d.nullPointer();
+		}
+		else if (msg.pSender->GetName().Compare("btn_errorPointer")==0) {
+			ErrorDemo d; d.errorPointer();
+		}
+		else if (msg.pSender->GetName().Compare("btn_notUIThreadError")==0) {
+			ErrorDemo d; d.notUIThreadError(this);
+			//for (int i = 0; i < 100;i++) {// 增加触发的概率
+				ChangeButtonName();
+			//}
+		}
+		else if (msg.pSender->GetName().Compare("btn_stackOverFlow")==0) {
+			ErrorDemo d; d.stackOverFlow();
+		}
+		else if (msg.pSender->GetName().Compare("btn_notInit")==0) {
+			ErrorDemo d; d.notInit();
+		}
+		else if (msg.pSender->GetName().Compare("btn_sehDemo")==0) {
+			ErrorDemo d; d.sehDemo();
+		}
+
 	}
 	else if (msg.sType == _T("setfocus"))
 	{
@@ -316,6 +339,14 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 		domain.erase(domain.begin() + nSel);//请思考此处为何要删除domain内数据
 		desc.erase(desc.begin() + nSel);
 	}
+}
+
+//改变
+void ListMainForm::ChangeButtonName() 
+{
+	CDuiString name = m_pSearch->GetText();
+	name.Append(_T("1"));
+	m_pSearch->SetText(name);
 }
 
 LRESULT  ListMainForm::OnAddListItem(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)

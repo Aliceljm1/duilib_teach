@@ -1,3 +1,44 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1137,5): warning MSB8012: TargetPath(G:\Project\GitProject\duilib_teach\DuiLib\.\Build\Debug\DuiLib.dll) does not match the Linker's OutputFile property value (G:\Project\GitProject\duilib_teach\bin\DuiLib_d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+﻿  StdAfx.cpp
+  UIWebBrowser.cpp
+  UIText.cpp
+  UISlider.cpp
+  UIScrollBar.cpp
+  UIRichEdit.cpp
+  UIProgress.cpp
+  UIOption.cpp
+  UIList.cpp
+  UILabel.cpp
+  UIGifAnim.cpp
+  UIEdit.cpp
+  UIDateTime.cpp
+  UICombo.cpp
+  UICheckBox.cpp
+  UIButton.cpp
+  UIActiveX.cpp
+  UIVerticalLayout.cpp
+  UITileLayout.cpp
+  UITabLayout.cpp
+  UIHorizontalLayout.cpp
+  正在生成代码...
+  正在编译...
+  UIChildLayout.cpp
+  UIRender.cpp
+  UIMarkup.cpp
+  UIManager.cpp
+  UIDlgBuilder.cpp
+  UIControl.cpp
+  UIContainer.cpp
+  UIBase.cpp
+  WndShadow.cpp
+  Utils.cpp
+  UIDelegate.cpp
+  WinImplBase.cpp
+  UIlib.cpp
+  UITreeView.cpp
+  正在生成代码...
+  stb_image.c
+  XUnzip.cpp
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1137,5): warning MSB8012: TargetPath(D:\Project\git-project\duilib_teach\DuiLib\.\Build\Debug\DuiLib.dll) does not match the Linker's OutputFile property value (D:\Project\git-project\duilib_teach\bin\DuiLib_d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1139,5): warning MSB8012: TargetName(DuiLib) does not match the Linker's OutputFile property value (DuiLib_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-  DuiLib.vcxproj -> G:\Project\GitProject\duilib_teach\DuiLib\.\Build\Debug\DuiLib.dll
+     正在创建库 ../lib/DuiLib_d.lib 和对象 ../lib/DuiLib_d.exp
+  DuiLib.vcxproj -> D:\Project\git-project\duilib_teach\DuiLib\.\Build\Debug\DuiLib.dll
