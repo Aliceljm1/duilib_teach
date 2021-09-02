@@ -1,4 +1,4 @@
-// FileTree.cpp : 定义应用程序的入口点。
+// FileTree.cpp : 锟斤拷锟斤拷应锟矫筹拷锟斤拷锟斤拷锟节点。
 //
 
 #include "stdafx.h"
@@ -23,7 +23,8 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR 
 	pFrame->Create(NULL, _T("TokenControl"), 
 		UI_WNDSTYLE_FRAME,
 		UI_WNDSTYLE_EX_FRAME, 0, 0, 300, 500);
-
+	//ShowWindow();
+// TestMemoryFunc
 	pFrame->CenterWindow();
 	::ShowWindow(*pFrame, SW_SHOW);
 	CPaintManagerUI::MessageLoop();
