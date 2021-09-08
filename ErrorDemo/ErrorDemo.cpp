@@ -71,7 +71,7 @@ void ErrorDemo::errorPointer()
 		InFo test;
 		pointer = &test;//超过作用域之后会自动执行析构函数，此时指针虽然有值，但是指向的对象已经被破坏了
 	}
-	int len = pointer->test();
+	int len = pointer->test();//应当掌握当前指针指向对象的生命周期，任何对象有生既有死。 在生命周期内安全是使用
 }
 
 //开启多线程操作UI元素，此时如果关闭窗口或者UI线程同步操作UI元素会导致崩溃发生

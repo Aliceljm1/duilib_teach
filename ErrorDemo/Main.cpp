@@ -19,7 +19,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 	pFrame->Create(NULL, _T("ListDemo"), UI_WNDSTYLE_FRAME, WS_EX_STATICEDGE | WS_EX_APPWINDOW, 0, 0, 600, 320);
 	//创建窗口，包括各种窗口属性，和扩展属性
 
-
+	char* s = new char[5];
+	strcpy(s, "abc00");
 
 	pFrame->CenterWindow();//居中窗口位置
 

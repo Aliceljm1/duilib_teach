@@ -112,65 +112,6 @@ DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 	}
 }
 
-/***
-*课程1 修改皮肤xml文件,对照“属性列表.xml”学习当前皮肤中使用了哪些属性和控件
-自行修改属性，观察结果，查找并解答注释中的TODO和提问
-*/
-
-
-/***
-*课程2 编写函数在点击search按钮之后当前窗口围绕左上角旋转，旋转半径为50，考虑多线程，定时器
-*/
-
-
-/**
-* 课程3，学习布局，将《duilib入门和xml培训布局案例》文件夹中的布局文件全部拷贝到skin\\ListRes\\中，
-然后修改 	CDuiString GetSkinFile() 的代码来切换布局文件，
-要求自己编写要给复杂的包含垂直布局，水平布局组合的Ui文件，同时修改窗口圆角，等等熟悉，发挥自己的创作醒性
-*/
-
-/***
-* 课程4 ,模拟qq，或者微信登陆窗口输入用户名密码，请求web接口，验证用户名密码，然后校验
-
-自行安装node.js客户端，下载代码运行：
-https://github.com/Aliceljm1/NodeDemo.git
-
-自行搜索互联网资源查找libcurl的用发，发送HTTP请求
-https://gitee.com/search?utf8=%E2%9C%93&q=libcurl++demo&type=
-
-
-*/
-
-
-/***
-*课程5，改用http://localhost:8081/autologin接口登陆，解析出用户信息用CUserInfo模型装载，相关解析代码放到CUserControler中，然后创建新的窗口显示这些信息
-其他字段自己完善，要求新的窗口需要继承WindowImplBase，而非CWindowWnd，仔细观察区别体会优点
-CUserControler中的其他函数自己实现。仔细体会使用不同的类将各个抽象层次的逻辑代码拆分出来的好处。每一层只负责一个维度的逻辑，
-每个层都很纯粹，可维护性，可复用性很强。
-
-将之前的字符串操作方法，网络访问方法都重构到对应的utils类中，保持每个类的纯粹性
-*/
-
-
-/*****
-*课程6练习抽出dll.lib库，分模块开发，将model和controler层分别拆分出lib，和dll调用。学会模块化开发
-参考： vs关键配置相关信息.docx
-*/
-
-
-/*****
-*课程7练习使用sqlite数据库，将登陆成功之后服务端返回的数据存储到数据库中使用（\3rd\sqlite\sqlite3.lib）
-下次启动软件自动读取数据库中的登陆历史记录，供用户选择点击直接登陆。 
-*/
-
-/***
-*课程8学习wtest项目中的语法知识
-*/
-
-/***
-*课程9学习errordemo的项目中的典型错误知识
-*/
-
 void ListMainForm::OnSearch()
 {
 
@@ -242,6 +183,10 @@ LPCTSTR  ListMainForm::GetItemText(CControlUI* pControl, int iIndex, int iSubIte
 	return pControl->GetUserData();
 }
 
+void ListMainForm::OnPrepare(TNotifyUI& msg)
+{
+
+}
 
 /**
 * DUI框架内部定义的消息回调函数，消息体TNotifyUI包括一个消息很自然的一些属性如消息的类型，
@@ -362,7 +307,7 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 /***
 可以使用内存诊断工具（调试，窗口，显示诊断工具）清晰的看到内存只增不减的情形
 */
-void ListMainForm::onTimerTest()
+void ListMainForm::OnTimerTest()
 {
 	void * ptr = malloc(1024 * 1024);
 
@@ -378,12 +323,71 @@ void ListMainForm::OnTimer(WPARAM wParam, LPARAM lParam)
 	{
 	case TIMER_ID_TEST:
 	{
-		onTimerTest();
+		OnTimerTest();
 		break;
 	}
 	default:
 		break;
 	}
+}
+
+CDuiString ListMainForm::GetSkinFolder()
+{
+
+	return _T("skin\\ListRes\\");
+}
+
+
+CDuiString ListMainForm::GetSkinFile()
+{
+	return _T("skin.xml");
+	//return _T("2.xml");
+}
+
+LPCTSTR ListMainForm::GetWindowClassName() const
+{
+	return _T("ScanMainForm");
+};
+
+UINT ListMainForm::GetClassStyle() const
+{
+	return CS_DBLCLKS;
+};
+
+void ListMainForm::OnFinalMessage(HWND /*hWnd*/)
+{
+	delete this;
+};
+
+LRESULT ListMainForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	//注意触发顺序，OnClose OnDestroy OnFinalMessage
+	bHandled = TRUE;
+	ShowWindow(true);
+	return 0;
+}
+
+LRESULT ListMainForm::OnDestroy(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	::PostQuitMessage(0L);
+	bHandled = FALSE;
+	return 0;
+}
+
+LRESULT ListMainForm::OnNcActivate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	if (::IsIconic(*this)) bHandled = FALSE;
+	return (wParam == 0) ? TRUE : FALSE;
+}
+
+LRESULT ListMainForm::OnNcCalcSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	return 0;
+}
+
+LRESULT ListMainForm::OnNcPaint(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	return 0;
 }
 
 

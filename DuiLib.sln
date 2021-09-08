@@ -44,6 +44,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IExplorerDemo", "IExplorerD
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ErrorDemo", "ErrorDemo\ErrorDemo.vcxproj", "{223017E7-7805-40D5-9D96-AABF572F57D1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ListDemo", "ListDemo\ListDemo.vcxproj", "{D53E049D-A74A-423F-8FDC-301DD70118D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -204,6 +206,18 @@ Global
 		{223017E7-7805-40D5-9D96-AABF572F57D1}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
 		{223017E7-7805-40D5-9D96-AABF572F57D1}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
 		{223017E7-7805-40D5-9D96-AABF572F57D1}.UnicodeRelease|x64.ActiveCfg = UnicodeRelease|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.Debug|Win32.Build.0 = Debug|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.Debug|x64.ActiveCfg = Debug|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.Release|Win32.ActiveCfg = Release|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.Release|Win32.Build.0 = Release|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.Release|x64.ActiveCfg = Release|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.UnicodeDebug|x64.ActiveCfg = UnicodeDebug|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{D53E049D-A74A-423F-8FDC-301DD70118D2}.UnicodeRelease|x64.ActiveCfg = UnicodeRelease|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,6 +234,7 @@ Global
 		{6DA347FB-1EB9-4944-9DE5-846DE1AA5672} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
 		{1459B2F2-09CD-4859-BF0A-77407F08162C} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
 		{223017E7-7805-40D5-9D96-AABF572F57D1} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
+		{D53E049D-A74A-423F-8FDC-301DD70118D2} = {5ABBC10A-DC58-4A8D-AA4D-D1CB2A58FD01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25A602C2-A6AC-44D7-A43D-A26574A887CB}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="300,300" sizebox="5,5,5,5">  
+    <HorizontalLayout  bkcolor="#FFFFFFFF" bordersize="1" inset="1,1,1,1">  
+    		<!--水平布局-->
+        <Control width="50" bkcolor="#FFFFFF00" />  
+        <Control width="50" bkcolor="#FFFF00FF" />  
+        <Control width="50" bkcolor="#FF00FFFF" />  
+    </HorizontalLayout>  
+</Window>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="300,300" sizebox="5,5,5,5">  
+	<!--自动拉伸的控件演示-->
+    <Container bordersize="1" bordercolor="0xFFFF0000" inset="1,1,1,1">  
+        <Control bkcolor="#FFFFFF00" />  
+    </Container>  
+</Window>
