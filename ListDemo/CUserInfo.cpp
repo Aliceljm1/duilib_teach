@@ -8,7 +8,8 @@ CUserInfo::CUserInfo()
 
 string CUserInfo::getId()
 {
-	return m_uid; };
+	return m_uid;
+};
 
 string CUserInfo::getUserName() 
 { 
