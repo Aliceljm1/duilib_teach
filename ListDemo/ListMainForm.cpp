@@ -279,7 +279,7 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 	LONG styleValue = ::GetWindowLong(*this, GWL_STYLE);
 	styleValue &= ~WS_CAPTION;
 	::SetWindowLong(*this, GWL_STYLE, styleValue | WS_CLIPSIBLINGS | WS_CLIPCHILDREN);
-
+	//GetLastError()
 	CDialogBuilder builder;
 	CDuiString strResourcePath = m_pm.GetResourcePath();
 	if (strResourcePath.IsEmpty())
