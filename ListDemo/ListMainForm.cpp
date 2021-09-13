@@ -144,7 +144,7 @@ void ListMainForm::OnSearch()
 */
 LPCTSTR  ListMainForm::GetItemText(CControlUI* pControl, int iIndex, int iSubItem)
 {
-	TCHAR szBuf[MAX_PATH] = { 0 };
+	TCHAR szBuf[MAX_PATH] = { 0 };//提问，TCHAR 表示什么数据类型
 	switch (iSubItem)
 	{
 	case 0:
@@ -152,7 +152,7 @@ LPCTSTR  ListMainForm::GetItemText(CControlUI* pControl, int iIndex, int iSubIte
 		break;
 	case 1:
 	{
-#ifdef _UNICODE		
+#ifdef _UNICODE		 //当项目配置的字符集配置为unicode的时候此宏定义就会放开
 		int iLen = domain[iIndex].length();
 		LPWSTR lpText = new WCHAR[iLen + 1];
 		::ZeroMemory(lpText, (iLen + 1) * sizeof(WCHAR));
