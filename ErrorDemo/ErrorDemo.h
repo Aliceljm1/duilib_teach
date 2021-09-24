@@ -12,6 +12,8 @@ public:
 	void windowsError(HDC hDC);
 	void sehDemo();
 
+	void NewFunction(int& b, int a);
+
 private:
 	string info;
 };

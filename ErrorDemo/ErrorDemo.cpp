@@ -127,6 +127,7 @@ void ErrorDemo::sehDemo()
 	}
 
 	__except (EXCEPTION_EXECUTE_HANDLER) {
+		OutputDebugStringA("ErrorDemo::sehDemo函数产生了崩溃");//需要有明确的日志记录崩溃
 		MessageBox(NULL, "exception", "exception", NULL);
 	}
 }
