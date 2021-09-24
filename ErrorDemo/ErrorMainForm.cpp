@@ -233,7 +233,7 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 			ErrorDemo d; d.stackOverFlow();
 		}
 		else if (msg.pSender->GetName().Compare("btn_notInit")==0) {
-			ErrorDemo d; d.notInit();
+			ErrorDemo d; d.windowsError(m_pm.GetPaintDC());
 		}
 		else if (msg.pSender->GetName().Compare("btn_sehDemo")==0) {
 			ErrorDemo d; d.sehDemo();

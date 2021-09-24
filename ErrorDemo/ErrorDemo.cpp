@@ -48,6 +48,13 @@ InFo* CreateDemo()
 	return new InFo();
 }
 
+InFo* CreateDemoWithObj()
+{
+	InFo f;
+	return &f;//有概率的会出现空指针或者野指针，因为f对象在本函数结束之后会被销毁，但是内存不一定及时回收
+}
+
+
 ErrorDemo::ErrorDemo() :
 	info("abc")
 {
@@ -61,6 +68,8 @@ void ErrorDemo::nullPointer()
 	// 正确写法，返回指针的函数代码永远要做非空判定，
 	//if (demo)demo->test();
 
+	InFo* demo2 = CreateDemoWithObj();
+	demo2->test();
 }
 
 
@@ -82,15 +91,30 @@ void ErrorDemo::notUIThreadError(void* uiWindow)
 	t.detach();
 }
 
+int foo()
+{
+	return foo();
+}
+
 void ErrorDemo::stackOverFlow()
 {
+	int array[1000000];//直接申请超大内存在栈内存，导致内存不足，
+	// 全局变量、new出来的对象、malloc存储在堆内存，其他的一般情况下都是存储到栈内存
+
+	int* p = (int*)malloc(1000000 * sizeof(int));//注释上一行，看本行执行情况
+
+	foo();//循环调用函数，导致栈内存不足，调用函数会执行压栈出栈，会消耗栈内存
 
 }
 
-void ErrorDemo::notInit()
-{
-	//创建
 
+void ErrorDemo::windowsError(HDC hDC)
+{
+	for (int i = 0; i < 10000; i++) {
+		HDC hCloneDC = ::CreateCompatibleDC(hDC);
+	}
+	MessageBox(NULL,"这个弹窗无法弹出","这个弹窗无法弹出",NULL);
+	//gdi对象占用超过系统限制的1万个，直接导致UI异常，可以通过任务管理器查看每个进程的gdi对象个数
 }
 
 void ErrorDemo::sehDemo()

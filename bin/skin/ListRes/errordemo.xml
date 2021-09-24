@@ -24,7 +24,7 @@
 		<Control />
 		<Button  name="btn_stackOverFlow" text="堆栈溢出" font="0" width="60" height="35" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
 		<Control />
-		<Button  name="btn_notInit" text="对象未初始化" font="0" width="100" height="35" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
+		<Button  name="btn_notInit" text="windows异常" font="0" width="100" height="35" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
 		<Control />
 		<Button  name="btn_sehDemo" text="SEH捕获" font="0"  width="60" height="35" normalimage="file='button.png' source='0,0,63,23'" hotimage="file='button.png' source='0,23,63,46'" pushedimage="file='button.png' source='0,23,63,46'"/>
 

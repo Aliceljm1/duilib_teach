@@ -115,8 +115,6 @@ DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 void ListMainForm::OnSearch()
 {
 
-	struct Prama *prama = new Prama;
-
 	CListUI* pList = static_cast<CListUI*>(m_pm.FindControl(_T("domainlist"))); //提问： 此处可以如何优化？
 	CEditUI* pEdit = static_cast<CEditUI*>(m_pm.FindControl(_T("input")));
 	pEdit->SetEnabled(false);
@@ -124,12 +122,13 @@ void ListMainForm::OnSearch()
 	m_pSearch->SetEnabled(false);//提问：此处为何要SetEnabled(false);？
 	pList->RemoveAll();
 	domain.empty();
-	domain.resize(0);
+	domain.resize(0);//提问：resize有什么好处
 	desc.empty();
 	desc.resize(0);
 	DWORD dwThreadID = 0;
 	pList->SetTextCallback(this);//[1]
 
+	struct Prama* prama = new Prama;
 	prama->hWnd = GetHWND();//给结构体赋值，用结构体传递参数的好处是：当要增加或者删除一个参数的时候可以直接修改结构体
 	prama->pList = pList;
 	prama->pSearch = m_pSearch;
@@ -242,7 +241,9 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 		sMessage += domain[iIndex].c_str();//此处参详c++运算符重载，代码	CDuiString CDuiString::operator+(LPCTSTR lpStr) const
 
 #endif
-		::MessageBox(NULL, sMessage.GetData(), _T("提示(by tojen)"), MB_OK);
+		::MessageBox(this->m_hWnd, sMessage.GetData(), _T("提示(by tojen)"), MB_OK);
+		//
+
 	}
 	else if (msg.sType == _T("menu"))
 	{
@@ -263,6 +264,7 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 	}
 }
 
+//所有对于UI的操作都必须在UI线程执行，非UI线程操作UI会导致偶发崩溃
 LRESULT  ListMainForm::OnAddListItem(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
 	CListTextElementUI* pListElement = (CListTextElementUI*)lParam;

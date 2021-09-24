@@ -37,11 +37,11 @@ https://github.com/Aliceljm1/100C
 # 课程4 
 讲解内容：
 1.git的简单使用，fork当前教程建立自己的项目，准备提交代码
-2.stdafx.h的用法，Windows的dll加载机制（显示和隐式加载dll-LoadLibrary），介绍工具depends.exe的使用
+2.stdafx.h的用法，Windows的dll加载机制（显示和隐式加载dll，LoadLibrary），介绍工具depends.exe的使用
 介绍procexp.exe查看进程加载的相关资源（dll, 句柄，线程，端口，权限）
 3.duilib是如何被引用的
 
-
+作业：
 模拟qq，或者微信登陆窗口输入用户名密码，请求web接口，验证用户名密码，然后校验
 自行安装node.js客户端，下载代码运行：
 https://github.com/Aliceljm1/NodeDemo.git

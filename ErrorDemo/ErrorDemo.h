@@ -9,7 +9,7 @@ public:
 	void errorPointer();
 	void notUIThreadError(void* uiWindow);
 	void stackOverFlow();
-	void notInit();
+	void windowsError(HDC hDC);
 	void sehDemo();
 
 private:
