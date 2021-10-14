@@ -10,9 +10,8 @@ public:
 	void notUIThreadError(void* uiWindow);
 	void stackOverFlow();
 	void windowsError(HDC hDC);
+	void pureVirtualFuncError();
 	void sehDemo();
-
-	void NewFunction(int& b, int a);
 
 private:
 	string info;

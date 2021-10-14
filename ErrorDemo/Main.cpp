@@ -5,11 +5,41 @@
 #include "ErrorMainForm.h"
 #include "MenuWnd.h"
 #include "..\DuiLib\UIlib.h"
+#include "StackWalker.h"
 
 using namespace DuiLib;
 
+
+class MyStackWalker : public StackWalker
+{
+public:
+	MyStackWalker() : StackWalker()
+	{
+		m_info = "";
+	}
+
+	string m_info;
+
+	virtual void OnOutput(LPCSTR szText) {
+		printf(szText);
+		m_info.append(szText);
+		StackWalker::OnOutput(szText);
+	}
+};
+
+void myPurecallHandler(void)
+{
+	MyStackWalker sw;
+	sw.ShowCallstack();
+	MessageBox(NULL, sw.m_info.c_str(), sw.m_info.c_str(), NULL);
+	exit(0);
+}
+
+
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*lpCmdLine*/, int nCmdShow)
 {
+	_set_purecall_handler(myPurecallHandler);//增加纯虚函数捕获函数，
+
 	CPaintManagerUI::SetInstance(hInstance);
 	//CPaintManagerUI::SetResourcePath(CPaintManagerUI::GetInstancePath() + _T("skin"));
 	//CPaintManagerUI::SetResourceZip(_T("ListRes.zip"));//加载资源包，可以解压之后查看里面的xml，png等等。

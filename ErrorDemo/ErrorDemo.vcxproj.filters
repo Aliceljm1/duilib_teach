@@ -13,6 +13,7 @@
       <Filter>Window</Filter>
     </ClCompile>
     <ClCompile Include="ErrorDemo.cpp" />
+    <ClCompile Include="StackWalker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ErrorMainForm.h">
@@ -25,5 +26,6 @@
       <Filter>Window</Filter>
     </ClInclude>
     <ClInclude Include="ErrorDemo.h" />
+    <ClInclude Include="StackWalker.h" />
   </ItemGroup>
 </Project>

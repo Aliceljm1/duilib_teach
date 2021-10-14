@@ -238,7 +238,11 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 		else if (msg.pSender->GetName().Compare("btn_sehDemo")==0) {
 			ErrorDemo d; d.sehDemo();
 		}
+		else if (msg.pSender->GetName().Compare("btn_virtualFuncError") == 0) {
+			ErrorDemo d; d.pureVirtualFuncError();
+		}
 
+		
 	}
 	else if (msg.sType == _T("setfocus"))
 	{

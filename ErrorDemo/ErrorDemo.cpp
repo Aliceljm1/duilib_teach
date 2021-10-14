@@ -4,6 +4,46 @@
 #include <thread>
 
 
+class cBaseApplication
+{
+public:
+	virtual          ~cBaseApplication() { Release(); }
+	virtual void     Release()
+	{
+		OnRelease();
+	};
+	cBaseApplication()
+	{ 
+		//OnCreate();
+	}
+	virtual void     OnRelease() = 0;
+	virtual void     OnCreate() = 0;
+}; // class cBaseApplication
+
+//file1.h
+class cApplication : public cBaseApplication
+{
+public:
+	virtual void     OnRelease()
+	{
+	};
+	virtual void     OnCreate() {}
+
+}; // class cApplication
+
+class Base
+{
+public:
+	virtual void foo() = 0;
+	virtual ~Base() {};
+};
+
+class Derived : public Base
+{
+public:
+	virtual void foo() override { printf("Derived::foo()"); }
+};
+
 class InFo {
 public:
 	string* m_p_data;
@@ -115,6 +155,24 @@ void ErrorDemo::windowsError(HDC hDC)
 	}
 	MessageBox(NULL,"这个弹窗无法弹出","这个弹窗无法弹出",NULL);
 	//gdi对象占用超过系统限制的1万个，直接导致UI异常，可以通过任务管理器查看每个进程的gdi对象个数
+}
+
+void ErrorDemo::pureVirtualFuncError()
+{
+	{//第一种情况，主动析构子类，然后调用积基类的纯虚函数
+		auto* pd = new Derived();
+		Base* pb = pd;
+		pd->~Derived();
+		pb->foo();
+	}
+
+	{//第二种情况，尝试调用基类的析构函数中包含了对于纯虚函数的调用
+		cApplication* pApplication = new cApplication();
+		pApplication->Release();
+		delete pApplication;      // R6025: pure virtual function call
+		pApplication = NULL;
+	}
+
 }
 
 void ErrorDemo::sehDemo()
