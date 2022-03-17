@@ -16,6 +16,24 @@ using namespace DuiLib;
 
 #define WM_ADDLISTITEM WM_USER + 50
 
+class Person
+{
+public:
+    Person(int v) {
+        value = v;
+        char str[MAX_PATH];
+        sprintf(str, "Cons=%d\n",value);
+        OutputDebugStringA(str);
+    }
+    ~Person() {
+        char str[MAX_PATH];
+        sprintf(str, "Des=%d\n", value);
+        OutputDebugStringA(str);
+    }
+    int value;
+
+};
+
 
 /*
 *  线程函数中传入的结构体变量，使用线程为了使界面线程立即返回，防止卡住，你们懂得。

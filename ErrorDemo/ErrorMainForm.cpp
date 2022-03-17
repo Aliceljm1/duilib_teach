@@ -9,8 +9,9 @@
 #include <comdef.h>
 #include <vector>
 #include <sstream>
+#include <memory>
 
-
+using namespace std;
 using namespace DuiLib;
 
 #define TIMER_ID_TEST 100
@@ -27,6 +28,10 @@ std::vector<std::string> domain;
 std::vector<std::string> desc;
 
 
+void test(shared_ptr<Person> p1)
+{
+
+} 
 
 /**
 ³õÊ¼»¯UI¿Ø¼þ
@@ -40,6 +45,13 @@ void ListMainForm::Init()
 	m_pRestoreBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("restorebtn")));
 	m_pMinBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("minbtn")));
 	m_pSearch = static_cast<CButtonUI*>(m_pm.FindControl(_T("btn_search")));
+
+	shared_ptr<Person> p1(new Person(1));
+	shared_ptr<Person> p1_1 = p1;
+
+	p1.reset(new Person(2));
+
+	test();
 }
 
 /**

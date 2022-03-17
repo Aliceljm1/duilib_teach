@@ -7,6 +7,11 @@
 #include "..\DuiLib\UIlib.h"
 #include "StackWalker.h"
 
+#include <imagehlp.h>
+#include <stdlib.h>
+#pragma comment(lib, "dbghelp.lib")
+
+
 using namespace DuiLib;
 
 
@@ -27,9 +32,6 @@ public:
 	}
 };
 
-#include <imagehlp.h>
-#include <stdlib.h>
-#pragma comment(lib, "dbghelp.lib")
 
 string dumpname = "";
 inline BOOL isDataSectionNeeded(const WCHAR* pModuleName)
