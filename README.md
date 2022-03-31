@@ -2,11 +2,12 @@
 此项目来源于github,用于我公司[安徽戴特教育科技有限公司](http://www.datedu.cn/)新人入职培训Duilib, 目前的第一个修改后的示范demo是ListDemo.
 主要目的是通过相关代码起到入门介绍的作用，其中也包括c++和visual studio的相关知识
 
+算法学习好去处
+https://github.com/Aliceljm1/100C
+
 c语言刷题好去处
 http://www.dotcpp.com/oj/problemset.html
 
-算法学习好去处
-https://github.com/Aliceljm1/100C
 
 学习目标：
 1.基础的c/c++语法知识
