@@ -121,9 +121,9 @@ void ListMainForm::OnSearch()
 	CDuiString input = pEdit->GetText();
 	m_pSearch->SetEnabled(false);//提问：此处为何要SetEnabled(false);？
 	pList->RemoveAll();
-	domain.empty();
+	domain.clear();
 	domain.resize(0);//提问：resize有什么好处
-	desc.empty();
+	desc.clear();
 	desc.resize(0);
 	DWORD dwThreadID = 0;
 	pList->SetTextCallback(this);//[1]

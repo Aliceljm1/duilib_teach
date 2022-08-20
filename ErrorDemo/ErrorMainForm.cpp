@@ -28,11 +28,6 @@ std::vector<std::string> domain;
 std::vector<std::string> desc;
 
 
-void test(shared_ptr<Person> p1)
-{
-
-} 
-
 /**
 初始化UI控件
 */
@@ -50,8 +45,6 @@ void ListMainForm::Init()
 	shared_ptr<Person> p1_1 = p1;
 
 	p1.reset(new Person(2));
-
-	test();
 }
 
 /**
@@ -135,9 +128,9 @@ void ListMainForm::OnSearch()
 	CDuiString input = pEdit->GetText();
 	m_pSearch->SetEnabled(false);//提问：此处为何要SetEnabled(false);？
 	pList->RemoveAll();
-	domain.empty();
+	domain.clear ();
 	domain.resize(0);
-	desc.empty();
+	desc.clear();
 	desc.resize(0);
 	DWORD dwThreadID = 0;
 	pList->SetTextCallback(this);//[1]
