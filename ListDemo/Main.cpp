@@ -23,7 +23,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 	 b = a * 2;
 
 
-	pFrame->CenterWindow();//居中窗口位置
+	//pFrame->CenterWindow();//居中窗口位置
 
 	::ShowWindow(*pFrame, SW_SHOW);//显示窗口
 

@@ -213,7 +213,8 @@ void CRichListWnd::OnClick( TNotifyUI &msg )
 {
 	if( msg.pSender == m_pCloseBtn ) 
 	{ 
-		PostQuitMessage(0); // 因为activex的原因，使用close可能会出现错误
+		//PostQuitMessage(0); // 因为activex的原因，使用close可能会出现错误
+		Close();
 		return; 
 	}else if( msg.pSender == m_pMinBtn ) 
 	{ 

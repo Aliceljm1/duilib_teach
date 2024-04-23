@@ -36,7 +36,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -302,6 +302,18 @@
     <ClInclude Include="ListMainForm.h" />
     <ClInclude Include="MenuWnd.h" />
     <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\bin\skin\ListRes\1.xml" />
+    <Xml Include="..\bin\skin\ListRes\2.xml" />
+    <Xml Include="..\bin\skin\ListRes\3.xml" />
+    <Xml Include="..\bin\skin\ListRes\4.xml" />
+    <Xml Include="..\bin\skin\ListRes\5.xml" />
+    <Xml Include="..\bin\skin\ListRes\6.xml" />
+    <Xml Include="..\bin\skin\ListRes\7.xml" />
+    <Xml Include="..\bin\skin\ListRes\8.xml" />
+    <Xml Include="..\bin\skin\ListRes\9.xml" />
+    <Xml Include="..\bin\skin\ListRes\skin.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

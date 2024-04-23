@@ -17,6 +17,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{8819c578-b6d8-42c1-8f75-1e6e7871904b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="skin">
+      <UniqueIdentifier>{20da26e5-de25-4f9c-ad4c-e6c9373d94e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -60,5 +63,37 @@
     <ClInclude Include="CNetUtils.h">
       <Filter>Utils</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\bin\skin\ListRes\1.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\2.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\3.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\4.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\5.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\6.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\7.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\8.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\9.xml">
+      <Filter>skin</Filter>
+    </Xml>
+    <Xml Include="..\bin\skin\ListRes\skin.xml">
+      <Filter>skin</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

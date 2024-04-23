@@ -55,7 +55,7 @@ public:
         ::ZeroMemory(pBackgroundBits, dwWidth * dwHeight * 4);
         HBITMAP hOldBitmap = (HBITMAP) ::SelectObject(hDcBackground, hbmpBackground);
 		
-        CRenderEngine::DrawImage(hDcBackground, &m_pm, rcClient, rcClient, m_di);
+        //CRenderEngine::DrawImage(hDcBackground, &m_pm, rcClient, rcClient, m_di);
 
         RECT rcWnd = { 0 };
         ::GetWindowRect(m_hWnd, &rcWnd);
@@ -89,10 +89,10 @@ public:
     }
 };
 
-class CMenuWnd : public CWindowWnd, public INotifyUI
+class CMenuWindow : public CWindowWnd, public INotifyUI
 {
 public:
-    CMenuWnd() : m_pOwner(NULL), m_pShadowWnd(NULL) { };
+    CMenuWindow() : m_pOwner(NULL), m_pShadowWnd(NULL) { };
 
     void Init(CControlUI* pOwner, POINT pt) {
         if( pOwner == NULL ) return;

@@ -72,7 +72,7 @@ DWORD WINAPI ListMainForm::Search(LPVOID lpParameter)
 
 	try
 	{
-		struct Prama* prama = (struct Prama *)lpParameter;//指针类型转换，从void* 转换为目标指针类型
+		struct Prama* prama = (struct Prama*)lpParameter;//指针类型转换，从void* 转换为目标指针类型
 		CListUI* pList = prama->pList;
 		CButtonUI* pSearch = prama->pSearch;
 		CDuiString tDomain = prama->tDomain;
@@ -175,7 +175,7 @@ LPCTSTR  ListMainForm::GetItemText(CControlUI* pControl, int iIndex, int iSubIte
 #else
 		_stprintf(szBuf, desc[iIndex].c_str());
 #endif
-}
+	}
 	break;
 	}
 	pControl->SetUserData(szBuf);
@@ -248,7 +248,7 @@ void  ListMainForm::Notify(TNotifyUI& msg)
 	else if (msg.sType == _T("menu"))
 	{
 		if (msg.pSender->GetName() != _T("domainlist")) return;
-		CMenuWnd* pMenu = new CMenuWnd();
+		CMenuWindow* pMenu = new CMenuWindow();
 		if (pMenu == NULL) { return; }
 		POINT pt = { msg.ptMouse.x, msg.ptMouse.y };
 		::ClientToScreen(*this, &pt);//当前窗口坐标转换为系统坐标，相当于局部坐标系转换为绝对坐标系。
@@ -273,6 +273,28 @@ LRESULT  ListMainForm::OnAddListItem(UINT uMsg, WPARAM wParam, LPARAM lParam, BO
 	return 0;
 }
 
+
+void PrintNodeNames(CMarkupNode& node) {
+	if (!node.IsValid()) {
+		return; // 如果节点无效，直接返回
+	}
+	char buf[256] = { 0 };OutputDebugString((sprintf(buf,"PrintNodeNames:%s\n",node.GetName()), buf));
+
+	// 递归遍历子节点
+	for (CMarkupNode child = node.GetChild(); child.IsValid(); child = child.GetSibling()) {
+		PrintNodeNames(child);
+	}
+}
+
+/**
+* 递归打印xml树的节点名称
+*/
+void PrintXmlTreeNames(CMarkupNode root) {
+		if (root.IsValid()) {
+			PrintNodeNames(root); 
+		}
+}
+
 /***
 *以下部分代码来自WindowImplBase::OnCreate， 可以了解最原始的窗口建立过程
 */
@@ -293,6 +315,8 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 
 	m_pm.Init(m_hWnd);
 	CControlUI* pRoot = builder.Create(GetSkinFile().GetData(), (UINT)0, NULL, &m_pm);
+
+	PrintXmlTreeNames(builder.GetMarkup()->GetRoot());
 	ASSERT(pRoot && "Failed to parse XML");
 	m_pm.AttachDialog(pRoot);
 	m_pm.AddNotifier(this);
@@ -311,7 +335,7 @@ LRESULT  ListMainForm::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& b
 */
 void ListMainForm::OnTimerTest()
 {
-	void * ptr = malloc(1024 * 1024);
+	void* ptr = malloc(1024 * 1024);
 
 	Sleep(10);//注释以下三句
 	if (ptr)
@@ -342,8 +366,8 @@ CDuiString ListMainForm::GetSkinFolder()
 
 CDuiString ListMainForm::GetSkinFile()
 {
-	return _T("skin.xml");
-	//return _T("2.xml");
+	//return _T("skin.xml");
+	return _T("2.xml");
 }
 
 LPCTSTR ListMainForm::GetWindowClassName() const
